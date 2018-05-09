@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.flatpages',
     'sourcebook_app',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 ]
 
 ROOT_URLCONF = 'sourcebook.urls'
@@ -119,9 +124,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = "/srv/sourcebook/sourcebook_app/media/"
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'sourcebook_app/static'),
 ]
+
+CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
+CKEDITOR_UPLOAD_PATH = "media/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_CONFIGS = {
+  "default": {
+      "removePlugins": "stylesheetparser",
+      'allowedContent' : True,
+   }
+ }
+
+

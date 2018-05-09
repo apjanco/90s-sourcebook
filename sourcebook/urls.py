@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from sourcebook_app import views
+from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('item/', include('django.contrib.flatpages.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('wind/',  views.wind, name='wind'),
 ]
