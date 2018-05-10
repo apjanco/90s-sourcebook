@@ -29,3 +29,18 @@ class rsvpAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(rsvp, rsvpAdmin)
+
+class itemAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(item, itemAdmin)
+
+class categoryAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(category, categoryAdmin)
+
+class subcategoryAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(subcategory, subcategoryAdmin)

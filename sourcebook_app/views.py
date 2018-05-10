@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from sourcebook_app.forms import rsvpForm
-from sourcebook_app.models import rsvp
+from sourcebook_app.models import *
 # Create your views here.
 
 def index(request):
@@ -24,3 +24,11 @@ def index(request):
 
 def wind(request):
     return render(request, 'wind.html')
+
+def items(request):
+    items = item.objects.all()
+    return render(request, 'items.html', { 'items':items })
+
+def item_view(request, title):
+    the_item = item.objects.filter(title=title)
+    return render(request, 'item.html', {'item':the_item})
