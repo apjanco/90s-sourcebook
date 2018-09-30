@@ -13,7 +13,7 @@ Begin creating your needs assessment and design plan. Outline the general scope 
 >  The sourcebook will be a resource for teaching the history and media culture of the post-Soviet 1990s. 
    
 3. The type of information and services that the client wants on the web site and the nature of this information (does the information change often, how could you best chunk the information for different audiences, do they have existing information that could be converted to web content?, etc.<br>
->  The group has pointed to 17 Moments in Soviet History as an example of what they would like the end-product to look like.  
+>  The group has pointed to [17 Moments in Soviet History](http://soviethistory.msu.edu/) as an example of what they would like the end-product to look like.  
 >  This site will be an open-source set of materials for teaching and individual learning. 
    
 4. the client's priorities in designing the web site<br>
