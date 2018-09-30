@@ -81,8 +81,6 @@ What is the "style" or "persona" associated with the current users, the organiza
 
 # Learning Activity 4. Design Next: Needs Assessment and Design Plan for Class Project.
 
-## Step 1. Identify Project (1 sentence to remind your teacher):
-
 ## Step 2. Content
 Where will your content come from? Will it be original writing? graphics? multi-media? Who will supply these? Are you collecting links to web resources and annotating them? Writing promotional pieces about organizational services? Creating tutorials and research guides? Explain your basic content.
 
