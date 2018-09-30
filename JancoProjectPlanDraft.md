@@ -5,52 +5,60 @@ Decide on your project for this course. Record your project contact name(s), and
 Begin creating your needs assessment and design plan. Outline the general scope of the project including:
 
 1. the history of the organization and their current web site(s) (if any), <br>
- I am interested in working with a group of graduate students at NYU and Columbia that are working to create a post-Soviet multimedia sourcebook.  
- They have an intitial site that they created on [Squarespace](www.postSoviet90s.com). 
+> I am interested in working with a group of graduate students at NYU and Columbia that are working to create a post-Soviet multimedia 
+> sourcebook.  
+> They have an intitial site that they created on [Squarespace](www.postSoviet90s.com). 
  
 2. the purpose of the web site and its intended audience<br>
-  The sourcebook will be a resource for teaching the history and media culture of the post-Soviet 1990s. 
+>  The sourcebook will be a resource for teaching the history and media culture of the post-Soviet 1990s. 
    
 3. The type of information and services that the client wants on the web site and the nature of this information (does the information change often, how could you best chunk the information for different audiences, do they have existing information that could be converted to web content?, etc.<br>
-  The group has pointed to 17 Moments in Soviet History as an example of what they would like the end-product to look like.  
-  This site will be an open-source set of materials for teaching and individual learning. 
+>  The group has pointed to 17 Moments in Soviet History as an example of what they would like the end-product to look like.  
+>  This site will be an open-source set of materials for teaching and individual learning. 
    
 4. the client's priorities in designing the web site<br>
-  As a member of SlavicDH (our affiliate group of the Association for Slavic, East European, & Eurasian Studies), I am helping to organize a workshop in Boston that will introduce scholars to the project, train them in the skills needed to contribute to the project, and beging working on potential contributions to the Sourcebook.  
+>  As a member of SlavicDH (our affiliate group of the Association for Slavic, East European, & Eurasian Studies), I am helping to 
+> organize a workshop in Boston that will introduce scholars to the project, train them in the skills needed to contribute to the project, > and beging working on potential contributions to the Sourcebook.  
 
 5. who will maintain the web site once it has been drafted?.<br>
-  The project will have long term support from  SlavicDH for hosting and development. 
+>  The project will have long term support from  SlavicDH for hosting and development. 
 
 ## Step 2. Identify Need
 Describe the need or purpose that this project would fulfill. What are your goals and intentions for this project?
 Is there a need for a particular library (or other organization) web site? or What are the goals of the page? Are you trying to Impress, Promote, or Attract?
 
 1. Brainstorm ideas to obtain maximum number of goals.<br>
-  The group's main goal is to feature a limited number of cultural objects that exemplify specific aspects of post-Soviet media culture.  They want to be highly selective in their items and to provide high quality metadata and commentary.
-  The group is currently composed on a small "core" group of students on the NEH grant.  They are not interested in building a larger community around the project. This should be seen mostly as an e-book.
-  The group is relatively conservative in their design choices and prefer the site to be familiar to a traditional academic audience.
+>  The group's main goal is to feature a limited number of cultural objects that exemplify specific aspects of post-Soviet media culture.  > They want to be highly selective in their items and to provide high quality metadata and commentary.
+>  The group is currently composed on a small "core" group of students on the NEH grant.  They are not interested in building a larger 
+> community around the project. This should be seen mostly as an e-book.
+> The group is relatively conservative in their design choices and prefer the site to be familiar to a traditional academic audience.
    
 2. Obtain consensus on the Goals: Share the goals  with other interested people - colleagues, users, etc. - to get their feedback; alter the goals, then re-review until everyone agrees (obtain consensus) that these are the goals for your web site.<br>
 I scheduled a meeting, but not everyone was able to attend.  I will have a more complete answer to this question once I am back from travelling on Oct. 7th and can arrange a new talk. 
+
 3. Goal Analysis: Are the goals measurable? Will you be able to observe or inquire with users how they are using the web site? How will you measure? Number of visits? Completion of measurable activities? Has someone been doing this already? and will they share their data with you?<br>
-  Analytics can be used to study how users engage with the site.  We should hope for behaviors where users proceed page-by-page through a source.  We should be particularly attentive if users are only hitting the home page or click through the pages without taking time to read the content.  We should expect "book-reading" type behaviors where users proceed through the content and take time to read. 
-  We can offer an anonymous survey to gather users' impressions of the site.  Does it feel intuitive?  Are they satisfied with the quality of the content as teaching material?  
+>  Analytics can be used to study how users engage with the site.  We should hope for behaviors where users proceed page-by-page through a > source.  We should be particularly attentive if users are only hitting the home page or click through the pages without taking time to 
+> read the content.  We should expect "book-reading" type behaviors where users proceed through the content and take time to read. 
+>  We can offer an anonymous survey to gather users' impressions of the site.  Does it feel intuitive?  Are they satisfied with the 
+> quality of the content as teaching material?  
 
 ## Step 3. Identify Users
 Who are the intended potential or current users of your web site?
 
 1. Are they children or adults? Are they subject experts or individuals who come to the site to learn? Are they students, faculty, staff, members of the general public, business or medical professionals, researchers? etc.<br>
-  Currently, the main use case will be students and teachers using the site as a course reading. 
-  Students should expect stable and useful URLs, clear text and simple tools for playing multimedia content. 
-  Professors will expect the site to be very modular.  Parts of the site can be assigned as individual readings, sections can be assigned, the site should also be useful as a reference 
-  for students not specifically assigned readings or researching an associated topic.  
+>  Currently, the main use case will be students and teachers using the site as a course reading. 
+>  Students should expect stable and useful URLs, clear text and simple tools for playing multimedia content. 
+>  Professors will expect the site to be very modular.  Parts of the site can be assigned as individual readings, sections can be
+> assigned, the site should also be useful as a reference 
+>  for students not specifically assigned readings or researching an associated topic.  
 
 2. How are your users expecting to use the web site? e.g.., for reference, for education, recreation, business? or conversely: How would you like your users to use the web site?<br>
-  User will likely expect the site to be relatively transparent and serve as access to sources and analysis. There is little room for creativity or innovation in design or presentation. 
-  However, given that the site is intended to engage youth, there is some need for bright and contemporary styling. 
+>  User will likely expect the site to be relatively transparent and serve as access to sources and analysis. There is little room for 
+> creativity or innovation in design or presentation. 
+> However, given that the site is intended to engage youth, there is some need for bright and contemporary styling. 
   
 3. What do the users already know? e.g., how to use the web , content subject matter, etc.<br>
-  Users are likely to have an existing interest in media studies, post-Soviet culture and the web.  The site should be multi-lingual with translations of image content in English and translations of commentary in Russian.   
+>  Users are likely to have an existing interest in media studies, post-Soviet culture and the web.  The site should be multi-lingual with > translations of image content in English and translations of commentary in Russian.   
 
 
 ## Step 4. Identify Style/Persona
