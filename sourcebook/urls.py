@@ -25,5 +25,5 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wind/',  views.wind, name='wind'),
     path('items/',  views.items, name='items'),
-    path('<name>', views.item_view, name='item_view'),
+    path('item/<title>', views.item_view, name='item_view'),
 ]
