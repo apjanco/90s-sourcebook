@@ -90,12 +90,13 @@ Where will your content come from? Will it be original writing? graphics? multi-
 ## Step 3. Layout and Navigation
 
 Using paper and pencil - graph paper* is best - draw a picture of how you would like to layout your page. You can use layout software if you prefer but there is no need to do so. Laying out the pages this way will give you a good sense of what you'll need to do to 'make it so' when you create your external CSS file. To turn in the paper and pencil layout, scan i, save it as a pdf, and upload the file.
+> Please see [here](https://github.com/apjanco/90s-sourcebook/blob/master/img/initial.jpeg) for initial sketch of colors, style and navigation.
 
-> Draw or type up a diagram or flowchart for how your web site will be organized and how users will navigate through the pages. Some  
-> designers refer to this diagram as a Site Map or a Mindmap of your web site. Your mindmap/flowchart for navigation can be very simple 
-> and written in pencil or pen on paper or whatever recording method works best for you. Some web -designers swear by a program called 
-> Visio. There is no need to be fancy unless you want to, or want to use your mindmap/flowchart for navigation as part of your completed 
-> web site. Answer these questions in planning for navigation:
+Draw or type up a diagram or flowchart for how your web site will be organized and how users will navigate through the pages. Some  
+ designers refer to this diagram as a Site Map or a Mindmap of your web site. Your mindmap/flowchart for navigation can be very simple 
+ and written in pencil or pen on paper or whatever recording method works best for you. Some web -designers swear by a program called 
+ Visio. There is no need to be fancy unless you want to, or want to use your mindmap/flowchart for navigation as part of your completed 
+ web site. Answer these questions in planning for navigation:
 
 1. Your main/agenda/organizer page will set the expectations for layout and navigation for your users. Given your content, and the style you want to achieve, how would you layout the main page? two columns, two columns with a header and footer? Three columns?, random css boxes(aka layers, div id's, information containers, content holders, etc.)
 > I expect to have a navbar with search field.  Navbar categories will have dropdowns.  There will be linked to switch between Russian and > English.
