@@ -19,13 +19,6 @@
                 <link rel="stylesheet" href="https://fonts.typotheque.com/WF-031216-010284.css" type="text/css" />
 	</head>
 <link rel="stylesheet" href="https://fonts.typotheque.com/WF-031216-010284.css" type="text/css" />
-<style type="text/css">
-         h4 { font-family:"Wind VF";
-font-style: Normal;
-font-weight: 300;
-font-size: 85px;
-font-variation-settings: "WIND" 135;
- }
  </style>
 
 	<body>
@@ -37,7 +30,7 @@ font-variation-settings: "WIND" 135;
 						<div class="inner">
 
 							<!-- Logo -->
-								{% include "wind.html" %}
+
 								<br>
 							<!-- Nav -->
 								<nav>
@@ -51,9 +44,23 @@ font-variation-settings: "WIND" 135;
 
 				<!-- Menu -->
 					<nav id="menu">
-						<h2>Menu</h2>
+					
 						<ul>
-							<li><a href="/">Home</a></li>
+							<li><a href="{% url 'index' %}">Home</a></li>
+                                                        <li><a href="{% url 'schedule' %}">Schedule</a></li>
+                                                        <hr>
+                                                        <b>8:00-9:00 AM</b>
+                                                        <li><a href="../introduction">Introduction</a></li>
+                                                        <hr>
+                                                        <b>9:00-10:00 AM</b>
+                                                        <li><a href="../uxdesign">Use Cases and User Experience Design</a></li>
+                                                        <li><a href="../research-questions">Research Questions</a></li>
+                                                        <li><a href="../metadata">Metadata and Data Modeling</a></li>
+                                                        <hr>
+                                                        <b>10:35-11:30</b>
+							<li><a href="../text">Text Analysis</a></li>
+							<li><a href="../network">Network Analysis</a></li>
+							<li><a href="../image">Image Analysis</a></li>
 						</ul>
 					</nav>
 

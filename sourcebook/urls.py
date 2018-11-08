@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from sourcebook_app import views
 from django.conf.urls import include
+from django.contrib.flatpages import views as flat_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('item/', include('django.contrib.flatpages.urls')),
+    path('schedule/', flat_views.flatpage, {'url':'/schedule/'}, name='schedule'),
+    path('uxdesign/', flat_views.flatpage, {'url':'/uxdesign/'}, name='uxdesign'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wind/',  views.wind, name='wind'),
     path('items/',  views.items, name='items'),
-    path('<name>', views.item_view, name='item_view'),
+    path('item/<title>', views.item_view, name='item_view'),
 ]

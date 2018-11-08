@@ -30,5 +30,5 @@ def items(request):
     return render(request, 'items.html', { 'items':items })
 
 def item_view(request, title):
-    the_item = item.objects.filter(title=title)
-    return render(request, 'item.html', {'item':the_item})
+    the_item = item.objects.get(title=title)
+    return render(request, 'item.html', { 'item':the_item })

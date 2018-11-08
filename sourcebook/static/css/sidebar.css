@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'StarlaGX';
+    src: url('./fonts/StarlaGX.ttf');
+}
+
+
+/* Create in your CSS file and add at least two classes to style your 
+HTML5 file content. */
+
+
+.card-title {
+	font-family: 'StarlaGX';
+	 font-variation-settings: 'wght' 50;
+    font-size: 20px;
+    color:black;
+
+}
+
+.card-text {
+	font-family: 'Garamond';
+    font-size: 12px;
+    color:black;
+
+}
+
+
+body {
+    background-color: white;
+}
+
+h5, h6 {
+	 font-family: 'StarlaGX';
+	 font-variation-settings: 'wght' 50;
+    font-size: 20px;
+    color:black;
+}
+
+
+a, button {
+    font-family: 'StarlaGX';
+    font-variation-settings: 'wght' 50;
+    font-size: 20px;
+    color:black;
+
+}
+
+
+a:link {
+    color: #561372;
+    text-align: center;
+}
+
+a:hover {
+    font-family: 'StarlaGX';
+    font-variation-settings: 'wght' 80;
+    font-size: 20px;
+}
+
+#header {
+	position: absolute;
+
+}
+#row {
+    display: flex;
+    position: relative;
+    color: lightgray;
+}
+
+#column {
+    flex: 50%;
+    padding: 8px;
+}
+
+#footer {
+	padding: 8px;
+	height: 150px;
+	position: relative;
+	background-image: url("https://static01.nyt.com/images/2011/08/19/world/europe/19russia-1/19russia-1-jumbo.jpg");
+
+}
+
+
+
+/* Add a table (Chapter 13) to your HTML5 file and style it. Note: your table can be as simple or as complex as you wish. */
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+    font-family: 'StarlaGX';
+    font-variation-settings: 'wght' 50;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+	background-color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

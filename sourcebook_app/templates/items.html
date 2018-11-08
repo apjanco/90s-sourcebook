@@ -7,7 +7,7 @@
 
 <div class="col-md-4 col-sm-4 col-xs-6">
         <div class="dummy"></div>
-        <a href="/" class="thumbnail purple"><b>{{ item.title }}</b><br><img src="/media/{{ item.file }}"></a>
+        <a href="{% url 'item_view' item.title %}" class="thumbnail purple"><b>{{ item.title }}</b><br><img src="/media/{{ item.file }}"></a>
 </div>
 
 {% endfor%}

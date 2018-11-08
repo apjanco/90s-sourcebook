@@ -40,7 +40,7 @@ class categoryAdmin(admin.ModelAdmin):
 
 admin.site.register(category, categoryAdmin)
 
-class subcategoryAdmin(admin.ModelAdmin):
-    pass
+#class subcategoryAdmin(admin.ModelAdmin):
+#    pass
 
-admin.site.register(subcategory, subcategoryAdmin)
+#admin.site.register(subcategory, subcategoryAdmin)
