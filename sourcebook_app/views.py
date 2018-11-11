@@ -16,14 +16,18 @@ def index(request):
                             note = note,
                             )
 			message = 'Thank you, see you in Boston'
-			return render(request, 'index.html', { 'message':message })
+			return render(request, 'index_sidebar.html', { 'message':message })
 
 	else:
 		form = rsvpForm()
-		return render(request, 'index.html', { 'form':form })
+		return render(request, 'index_sidebar.html', { 'form':form })
 
 def wind(request):
     return render(request, 'wind.html')
+
+def people(request):
+	people = rsvp.objects.all()
+	return render(request, 'people.html', {'people': people })
 
 def items(request):
     items = item.objects.all()

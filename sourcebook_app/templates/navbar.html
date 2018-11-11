@@ -1,0 +1,34 @@
+
+{% load static %}
+{% block navbar %}
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'schedule' %}">Schedule</a>
+    <hr>
+    <a href="../introduction">Introduction</a>
+    <hr>
+    <a href="../uxdesign">Use Cases and User Experience Design</a>
+    <a href="../research-questions">Research Questions</a>
+    <a href="../metadata">Metadata and Data Modeling</a>
+    <hr>
+    <a href="../text">Text Analysis</a>
+    <a href="../network">Network Analysis</a>
+    <a href="../image">Image Analysis</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <h3 class="card-title">ASEEES Pre-Conference Digital Project Workshop</h3></span>
+<p class="card-text"> December 6, 8:00am to 12:00pm<br> Boston Marriott Copley Place, floor 4, <a class="card-text" href="{% static 'ptown.jpeg' %}">Provincetown Room</a></p>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+{% endblock %}

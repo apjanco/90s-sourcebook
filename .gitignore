@@ -1,1 +1,2 @@
-settings.py
+/sourcebook/settings.py
+db.sqlite3

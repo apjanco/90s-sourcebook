@@ -1,23 +1,30 @@
 {% load staticfiles %}
 {% block footer %}
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<ul class="icons">
-									<li><a href="https://twitter.com/SlavicDH" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/groups/413695302023356/" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="https://github.com/apjanco/90s-sourcebook" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:ajanco@haverford.edu" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
-								</ul>
-							</section>
-						</div>
+<div id="footer">
+  <table>
+  <div>
+    <tr>
+    <th>About</th>
+    <th>Supported by</th>
+    <th>Follow us</th>
+  </tr>
+  <tr>
+      <td><a href="{% url 'people' %}">People</a></td>
+	  <td><a href="https://slavicdh.aseees.hcommons.org/">SlavicDH</a></td>
 
+	  <td><a href="https://twitter.com/SlavicDH">twitter</a></td>
 
-					</footer>
+  </tr>
+  <tr>
+	  <td><a href="mailto:ajanco@haverford.edu">Contact</a></td>
+    <td><a href="http://www.postsoviet90s.com">1990s Sourcebook</a></td>
+	  <td><a href="https://www.facebook.com/groups/413695302023356/">facebook</a></td>
+  </tr>
+  </div>
+  </table>
 
-			</div>
+</div>
 
 
 {% endblock  %}

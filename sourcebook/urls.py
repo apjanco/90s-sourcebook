@@ -26,6 +26,7 @@ urlpatterns = [
     path('uxdesign/', flat_views.flatpage, {'url':'/uxdesign/'}, name='uxdesign'),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('wind/',  views.wind, name='wind'),
+    path('people/',  views.people, name='people'),
     path('items/',  views.items, name='items'),
     path('item/<title>', views.item_view, name='item_view'),
 ]

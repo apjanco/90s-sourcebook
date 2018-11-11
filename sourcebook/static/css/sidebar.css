@@ -1,45 +1,58 @@
-@font-face {
-    font-family: 'StarlaGX';
-    src: url('./fonts/StarlaGX.ttf');
-}
-
 
 /* Create in your CSS file and add at least two classes to style your 
 HTML5 file content. */
 
 
 .card-title {
-	font-family: 'StarlaGX';
-	 font-variation-settings: 'wght' 50;
+	font-family: 'Quicksand';
     font-size: 20px;
     color:black;
 
 }
 
 .card-text {
-	font-family: 'Garamond';
-    font-size: 12px;
+	font-family: 'Cormorant Garamond';
+    font-size: 16px;
     color:black;
 
 }
 
+.card-link {
+    font-family: 'Quicksand';
+    font-size: 16px;
+    color:black;
+
+}
+
+.read-text {
+	font-family: 'Cormorant Garamond';
+    font-size: 24px;
+    color:black;
+
+}
+
+.mellow {
+    font-family: 'StarlaGX';
+	 font-variation-settings: 'wght' 20;
+    font-size: 16px;
+    color:darkgray;
+}
 
 body {
     background-color: white;
+    padding: 8px;
 }
 
 h5, h6 {
-	 font-family: 'StarlaGX';
-	 font-variation-settings: 'wght' 50;
-    font-size: 20px;
+	 font-family: 'Quicksand';
+	font-size: 20px;
     color:black;
 }
 
 
 a, button {
-    font-family: 'StarlaGX';
-    font-variation-settings: 'wght' 50;
-    font-size: 20px;
+    font-family: 'Quicksand';
+    font-size: 14px;
     color:black;
 
 }
@@ -51,9 +64,10 @@ a:link {
 }
 
 a:hover {
-    font-family: 'StarlaGX';
-    font-variation-settings: 'wght' 80;
+
     font-size: 20px;
+    color:black;
+
 }
 
 #header {
@@ -89,8 +103,7 @@ table {
     text-align: center;
     width: 100%;
     background-color: white;
-    font-family: 'StarlaGX';
-    font-variation-settings: 'wght' 50;
+    font-family: 'Quicksand';
     font-size: 14px;
     opacity: 0.8;
 }
@@ -119,6 +132,9 @@ tr:hover {
 }
 
 .sidenav a {
+    font-family: 'MeritBadge';
+    font-variation-settings:'SANS' 0;
+    font-variation-settings:'wght' 100;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
@@ -128,7 +144,10 @@ tr:hover {
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    font-family: 'MeritBadge';
+    font-variation-settings:'BOLD' 0;
+    font-variation-settings:'wght' 300;
+    color: #818181;
 }
 
 .sidenav .closebtn {

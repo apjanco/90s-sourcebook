@@ -25,7 +25,7 @@ SECRET_KEY = '!#(5f-p=i3dmks7v+0)+q1$alv-09a93!w#!$3(s^^yh@3qioz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['104.236.220.106']
 
 
 # Application definition
@@ -81,8 +81,10 @@ WSGI_APPLICATION = 'sourcebook.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': '/home/ajanco/db.cnf',
+        },
     }
 }
 

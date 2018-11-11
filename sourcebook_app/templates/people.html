@@ -1,0 +1,100 @@
+
+{% load static %}
+<link rel="stylesheet" href="https://fonts.typotheque.com/WF-031216-010284.css" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Quicksand" rel="stylesheet">
+
+<style>
+
+
+wind { font-family:"Wind VF";
+font-style: Normal;
+font-weight: 300;
+font-size: 16px;
+font-variation-settings: "WIND" 135;
+    color: black;
+ }
+
+    @font-face {
+    font-family: 'StarlaGX';
+    src: url("{% static '/fonts/StarlaGX.ttf' %}");
+}
+    @font-face {
+    font-family: 'MeritBadge';
+    src: url("{% static '/fonts/MeritBadge-VF.ttf' %}");
+}
+    @font-face {
+        font-family: 'Quicksand', sans-serif;
+    }
+@font-face {
+    font-family: 'Cormorant Garamond', serif;
+}
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+<title>1990s Sourcebook + SlavicDH</title>
+<link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'schedule' %}">Schedule</a>
+    <hr>
+    <a href="../introduction">Introduction</a>
+    <hr>
+    <a href="../uxdesign">Use Cases and User Experience Design</a>
+    <a href="../research-questions">Research Questions</a>
+    <a href="../metadata">Metadata and Data Modeling</a>
+    <hr>
+    <a href="../text">Text Analysis</a>
+    <a href="../network">Network Analysis</a>
+    <a href="../image">Image Analysis</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <h3 class="card-title">ASEEES Pre-Conference Digital Project Workshop</h3></span>
+
+<b class="card-text">Who's coming?</b>
+{% for person in people %}
+<p class="card-text">{{ person }},</p>
+{% endfor %}
+<div id="footer">
+  <table>
+  <div>
+    <tr>
+    <th>About</th>
+    <th>Supported by</th> 
+    <th>Follow us</th>
+  </tr>
+  <tr>
+    <td>People</td>
+    <td>SlavicDH</td> 
+    <td>twitter</td>
+  </tr>
+  <tr>
+    <td>Contact</td>
+    <td></td> 
+    <td>facebook</td>
+  </tr>
+  </div>
+  </table>
+  
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html> 
+
