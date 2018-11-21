@@ -1,2 +1,5 @@
+/sourcebook_app/media/media/
+/sourcebook/sourcebook_app/static/
+/sourcebook/sourcebook_app/static/images
 /sourcebook/settings.py
 db.sqlite3
