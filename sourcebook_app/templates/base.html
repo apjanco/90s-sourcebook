@@ -9,14 +9,19 @@
 {% block head %}
 <head>
 	<title>1990s Sourcebook + SlavicDH</title>
+	  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="{% static 'css/sidebar.css' %}">
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://fonts.typotheque.com/WF-031216-010284.css" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Quicksand" rel="stylesheet">
-<style>
 
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+<style>
 
 wind { font-family:"Wind VF";
 font-style: Normal;
@@ -32,7 +37,7 @@ font-variation-settings: "WIND" 135;
 }
     @font-face {
     font-family: 'MeritBadge';
-    src: url("{% static '/fonts/MeritBadge-VF.ttf' %}");
+    src: url("{% static '/fonts/MeritBadge-VF-customized.ttf' %}");
 }
     @font-face {
         font-family: 'Quicksand', sans-serif;
@@ -41,7 +46,6 @@ font-variation-settings: "WIND" 135;
     font-family: 'Cormorant Garamond', serif;
 }
 </style>
-
 
 </head>
 

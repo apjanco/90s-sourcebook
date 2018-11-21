@@ -35,6 +35,13 @@ class itemAdmin(admin.ModelAdmin):
 
 admin.site.register(item, itemAdmin)
 
+class KOAdmin(admin.ModelAdmin):
+    search_fields = ['filename', 'text', ]
+    list_display = ['filename', 'year', 'issue', 'date',]
+    list_filter = ['year', 'issue', ]
+
+admin.site.register(KO, KOAdmin)
+
 class categoryAdmin(admin.ModelAdmin):
     pass
 
@@ -44,3 +51,10 @@ admin.site.register(category, categoryAdmin)
 #    pass
 
 #admin.site.register(subcategory, subcategoryAdmin)
+class BestsellerListAdmin(admin.ModelAdmin):
+    search_fields = ['author', 'title', ]
+    list_display = ['author', 'title', 'journal', 'year', 'issue', 'date', 'rank', ]
+    list_filter = ['year', 'issue', 'date', 'rank', ]
+
+admin.site.register(BestsellerList, BestsellerListAdmin)
+

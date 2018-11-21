@@ -29,4 +29,11 @@ urlpatterns = [
     path('people/',  views.people, name='people'),
     path('items/',  views.items, name='items'),
     path('item/<title>', views.item_view, name='item_view'),
+    path('ko/<filename>', views.ko, name='ko'),
+    path('KO/<year>/<issue>/<date>/', views.kos2, name='kos2'),
+    path('KO/<year>/<issue>/', views.kos1, name='kos1'),
+    path('KO/<year>/', views.kos0, name='kos0'),
+    path('all-kos/', views.kos, name='kos'),
+    path('datatable/ko/', views.KOListJson.as_view(), name='ko_list_json'),
+    path('bestsellers/', views.bestsellers, name='bestsellers'),
 ]

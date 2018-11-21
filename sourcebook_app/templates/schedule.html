@@ -7,76 +7,10 @@
 {% include "wind1.html" %}
 {% include "navbar.html" %}
 {% if flatpage %}
-<link rel="stylesheet" href="https://fonts.typotheque.com/WF-031216-010284.css" type="text/css" />
-<style type="text/css">
-         wind { font-family:"Wind VF";
-font-style: Normal;
-font-weight: 300;
-font-size: 45px;
-font-variation-settings: "WIND" 135;
- }
-</style>
 
-<div id="objectBox" style="text-align:left; width:50%; height:30%; background-color: transparent;">
-<wind id="wind">{{ flatpage.title }}</wind>
+<h5 class="card-title" style="padding-left: 10px">{{ flatpage.title }}</h5>
 </div>
-<script type="text/javascript">
 
-function findObjectCoords(mouseEvent)
-{
-  var obj = document.getElementById("objectBox");
-  var obj_left = 0;
-  var obj_top = 0;
-  var xpos;
-  var ypos;
-  while (obj.offsetParent)
-  {
-    obj_left += obj.offsetLeft;
-    obj_top += obj.offsetTop;
-    obj = obj.offsetParent;
-  }
-  if (mouseEvent)
-  {
-    //FireFox
-    xpos = mouseEvent.pageX;
-    ypos = mouseEvent.pageY;
-  }
-  else
-  {
-    //IE
-    xpos = window.event.x + document.body.scrollLeft - 2;
-    ypos = window.event.y + document.body.scrollTop - 2;
-  }
-  xpos -= obj_left;
-  ypos -= obj_top;
-  var angle = calculateAngle(xpos, ypos);
-  //angle += calculateOffset(xpos, ypos);
-  //var angle = calculateOffset(xpos, ypos);
-  var omg = '"' + 'WIND' + '"' + " " + angle
-  //console.log("WIND" + angle)
-  //document.getElementById("wind").setAttribute('font-variation-settings', omg);
-  document.getElementById("wind").setAttribute('style', 'font-variation-settings: ' + omg);
-}
-document.getElementById("objectBox").onmousemove = findObjectCoords;
-document.getElementById("objectBox").ontouchmove = findObjectCoords;
-
-
-function calculateVerticalAngle(xpos, ypos) {
-	return Math.atan2(Math.abs(400-xpos), Math.abs(200-ypos)) * 180 / Math.PI | 0;
-}
-
-function calculateAngle(xpos, ypos) {
-	var a = calculateVerticalAngle(xpos, ypos);
-	if (xpos < 400) {
-		// Q2 : Q3
-		return (ypos < 200) ? 360 - a : 180 + a;
-	} else {
-		// Q1 : Q4
-		return (ypos < 200) ? a : 180 - a;
-	}
-}
-
-</script>
 <div style="margin-top: 15px; padding:30px;">
 
 {{ flatpage.content }}

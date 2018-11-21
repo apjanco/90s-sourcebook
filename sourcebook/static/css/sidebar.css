@@ -2,8 +2,19 @@
 /* Create in your CSS file and add at least two classes to style your 
 HTML5 file content. */
 
+.navback {
+    padding: 8px;
+	height: 150px;
+	position: relative;
+    opacity: 0.9%;
+    background: linear-gradient(90deg, #AA9CFC, #FC9CE7);
+
+
+}
+
 
 .card-title {
+    padding: 8px;
 	font-family: 'Quicksand';
     font-size: 20px;
     color:black;
@@ -12,7 +23,7 @@ HTML5 file content. */
 
 .card-text {
 	font-family: 'Cormorant Garamond';
-    font-size: 16px;
+    font-size: 18px;
     color:black;
 
 }
@@ -65,8 +76,7 @@ a:link {
 
 a:hover {
 
-    font-size: 20px;
-    color:black;
+    color:darkred;
 
 }
 
@@ -85,15 +95,10 @@ a:hover {
     padding: 8px;
 }
 
-#footer {
-	padding: 8px;
-	height: 150px;
-	position: relative;
-	background-image: url("https://static01.nyt.com/images/2011/08/19/world/europe/19russia-1/19russia-1-jumbo.jpg");
-
+p {
+    font-family: 'Quicksand';
+    font-size: 18px;
 }
-
-
 
 /* Add a table (Chapter 13) to your HTML5 file and style it. Note: your table can be as simple or as complex as you wish. */
 
@@ -102,10 +107,15 @@ table {
     margin-top: 10px;
     text-align: center;
     width: 100%;
-    background-color: white;
+    background: linear-gradient(90deg, #AA9CFC, #FC9CE7);;
     font-family: 'Quicksand';
     font-size: 14px;
-    opacity: 0.8;
+}
+
+button {
+    background: linear-gradient(90deg, #AA9CFC, #FC9CE7);
+    font-family: 'Quicksand';
+    font-size: 14px;
 }
 
 th, td {

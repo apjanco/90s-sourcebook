@@ -3,128 +3,46 @@
 
 {% block content %}
 
+{% include "navbar.html" %}
+<br>
 
-<div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="{% url 'index' %}">Home</a>
-    <a href="{% url 'schedule' %}">Schedule</a>
-    <hr>
-    <a href="../introduction">Introduction</a>
-    <hr>
-    <a href="../uxdesign">Use Cases and User Experience Design</a>
-    <a href="../research-questions">Research Questions</a>
-    <a href="../metadata">Metadata and Data Modeling</a>
-    <hr>
-    <a href="../text">Text Analysis</a>
-    <a href="../network">Network Analysis</a>
-    <a href="../image">Image Analysis</a>
-</div>
-
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <h3 class="card-title">ASEEES Pre-Conference Digital Project Workshop</h3></span>
-<p class="card-text"> December 6, 8:00am to 12:00pm<br> Boston Marriott Copley Place, floor 4, <a class="card-text" href="{% static 'ptown.jpeg' %}">Provincetown Room</a></p>
-
-
-
-<!-- Section for subject headings -->
- <b class="card-text">Introduction</b><wind>...</wind><b class="card-text">8-9</b>
+    <!-- Section for subject headings -->
+ <b class="card-text"></b>
 <div id="row">
     <div id="column">
         <div class="card">
           <div class="card-body">
+                  <p style="padding: 8px;" class="card-text"> December 6, 8:00am to 12:00pm <a href="https://goo.gl/maps/Vo7abBXcQC52">Boston Marriott Copley Place</a>, floor 4, <a class="card-text" href="{% static 'ptown.jpeg' %}">Provincetown Room</a></p>
 
+              <hr>
 
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-             <a href="../introduction" class="card-link"> Read more...</a>
+               <p class="card-text" style="padding: 8px;">
+           Welcome to the first SlavicDH pre-conference workshop. Our goal is to build capacity for Digital Humanities research in our field and to support emerging work through opportunities for ASEEES members to participate in the design, management, and development of DH projects.
+<br><br>
+            This year we're working with the Post-Soviet Public Sphere: Multimedia Sourcebook of the 1990s. This is a project that seeks to gather a collection of items to facilitate the teaching and research of post-Soviet media culture from Gorbachev's glasnost' to Putin's election in 2000.
+                   You can find more about the project on their website <a href="http://postsoviet90s.com">postsoviet90s.com</a>.</p>
+              <button><a href="../schedule" class="card-link">Schedule</a></button> <button><a href="{% url 'kos' %}" class="card-link">Knizhnoe obozrenie</a></button><button><a href="{% url 'bestsellers' %}" class="card-link">Bestsellers Lists</a></button>
 
-        </div>
+              {% if message %}
+              <p class="card-title">{{ message }}</p>
+{% else %}
+
+              <p class="card-title">Please RSVP here:</p>
+<form action="" method="post">
+    {% csrf_token %}
+    <p class="card-text">Name:  {{ form.name }}</p>
+    <p class="card-text">Email:  {{ form.email }}</p>
+    <p class="card-text">Notes: {{form.note}}</p>
+<input type="submit" value="Submit" />
+</form>
+{% endif %}
+          </div>
       </div>
     </div>
 </div>
 <hr>
 <br>
- <b class="card-text">Project Management</b><wind>...</wind><b class="card-text">9-10</b>
 
-<div id="row">
-    <div id="column">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Use Cases and User Experience Design</h5>
-           
-             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
-           <a href="../uxdesign" class="card-link"> Read more...</a>
-
-        </div>
-      </div>
-    </div>
-
-      <div id="column">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Research Questions</h5>
-             
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
-             <a href="../research-questions" class="card-link"> Read more...</a>
-              
-        </div> 
-      </div>
-    </div>  
-
-   <div id="column">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Metadata & Data Modeling</h5>
-             
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
-             <a href="../metadata" class="card-link"> Read more...</a>
-              
-        </div> 
-      </div>
-    </div>
-
-
-</div>
-
-<hr>
- <b class="card-text">Digital Humanities Analysis Methods</b><wind>...</wind><b class="card-text">10:35-11:30</b>
-
-<div id="row">
-    <div id="column">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Text Analysis</h5>
-
-             <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
-           <a href="../text" class="card-link"> Read more...</a>
-
-        </div>
-      </div>
-    </div>
-
-      <div id="column">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Network Analysis</h5>
-
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
-             <a href="../network" class="card-link"> Read more...</a>
-
-        </div>
-      </div>
-    </div>
-
-   <div id="column">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Image Analysis</h5>
-
-              <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.  </p>
-             <a href="../image" class="card-link"> Read more...</a>
-
-        </div>
-      </div>
-    </div>
-
-<hr>
 </div>
 
 

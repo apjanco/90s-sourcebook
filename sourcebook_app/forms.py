@@ -14,3 +14,5 @@ class rsvpForm(forms.ModelForm):
 		fields = ['name','email','note']
 		model = rsvp
 
+class SearchForm(forms.Form):
+	search = forms.CharField(label='search', max_length=100)
