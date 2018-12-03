@@ -30,6 +30,13 @@ class rsvpAdmin(admin.ModelAdmin):
 
 admin.site.register(rsvp, rsvpAdmin)
 
+
+class DistantViewingAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(DistantViewing, DistantViewingAdmin)
+
+
 class itemAdmin(admin.ModelAdmin):
     pass
 

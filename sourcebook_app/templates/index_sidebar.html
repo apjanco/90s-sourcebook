@@ -19,9 +19,9 @@
                <p class="card-text" style="padding: 8px;">
            Welcome to the first SlavicDH pre-conference workshop. Our goal is to build capacity for Digital Humanities research in our field and to support emerging work through opportunities for ASEEES members to participate in the design, management, and development of DH projects.
 <br><br>
-            This year we're working with the Post-Soviet Public Sphere: Multimedia Sourcebook of the 1990s. This is a project that seeks to gather a collection of items to facilitate the teaching and research of post-Soviet media culture from Gorbachev's glasnost' to Putin's election in 2000.
+                   This year we're working with the <a href="http://postsoviet90s.com">Post-Soviet Public Sphere: Multimedia Sourcebook of the 1990s</a>. This is a project that will gather a collection of items to facilitate the teaching and research of post-Soviet media culture from Gorbachev's <i>glasnost'</i> to Putin's election in 2000.
                    You can find more about the project on their website <a href="http://postsoviet90s.com">postsoviet90s.com</a>.</p>
-              <button><a href="../schedule" class="card-link">Schedule</a></button> <button><a href="{% url 'kos' %}" class="card-link">Knizhnoe obozrenie</a></button><button><a href="{% url 'bestsellers' %}" class="card-link">Bestsellers Lists</a></button>
+              <button onclick="window.location='../schedule'">Schedule</button> <button onclick="window.location='{% url "kos" %}'">Knizhnoe obozrenie</button> <button onclick="window.location='{% url "bestsellers" %}'">Bestsellers Lists</button> <button onclick="window.location='{% url "distant_viewing" %}'">Distant Viewing</button>
 
               {% if message %}
               <p class="card-title">{{ message }}</p>

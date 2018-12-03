@@ -22,8 +22,8 @@ HTML5 file content. */
 }
 
 .card-text {
-	font-family: 'Cormorant Garamond';
-    font-size: 18px;
+	font-family: 'Open Sans';
+    font-size: 14px;
     color:black;
 
 }
@@ -36,8 +36,8 @@ HTML5 file content. */
 }
 
 .read-text {
-	font-family: 'Cormorant Garamond';
-    font-size: 24px;
+	font-family: 'Open Sans';
+    font-size: 20px;
     color:black;
 
 }
@@ -63,7 +63,6 @@ h5, h6 {
 
 a, button {
     font-family: 'Quicksand';
-    font-size: 14px;
     color:black;
 
 }
@@ -116,6 +115,14 @@ button {
     background: linear-gradient(90deg, #AA9CFC, #FC9CE7);
     font-family: 'Quicksand';
     font-size: 14px;
+    border: 2px solid #000000;
+}
+
+button:hover {
+    background: linear-gradient(90deg,#FC9CE7, #AA9CFC);
+    font-family: 'Quicksand';
+    font-size: 14px;
+    border: 2px solid #000000;
 }
 
 th, td {

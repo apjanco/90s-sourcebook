@@ -3,6 +3,15 @@ from ckeditor.fields import RichTextField
 #
 # Create your models here.
 
+class DistantViewing(models.Model):
+    frame = models.CharField(max_length=200, null=True)
+    time = models.CharField(max_length=200, null=True)
+    score = models.CharField(max_length=200, null=True)
+    object = models.CharField(max_length=200, null=True)
+
+    def __str__(self):
+       return self.frame
+
 class rsvp(models.Model):
     name = models.CharField(max_length=200, null=True)
     email = models.EmailField(max_length=200, null=True)

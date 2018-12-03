@@ -1,10 +1,18 @@
 from django.shortcuts import render
-from sourcebook_app.forms import rsvpForm, SearchForm
+from sourcebook_app.forms import rsvpForm, SearchForm, TextSummarizationForm
 from sourcebook_app.models import *
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, FileResponse
 from django_datatables_view.base_datatable_view import BaseDatatableView
 from django.utils.html import escape, format_html, mark_safe
 from django.urls import reverse
+from django.http import JsonResponse
+import json
+import tempfile
+from sourcebook_app.text_summarization import handle_uploaded_file, handle_url
+from django.utils.datastructures import MultiValueDictKeyError
+
+
+
 
 # Create your views here.
 
@@ -27,6 +35,9 @@ def index(request):
         form = rsvpForm()
         kos = KO.objects.all()
         return render(request, 'index_sidebar.html', { 'form':form, 'kos':kos })
+
+def secret(request):
+    return render(request, 'secret.html')
 
 def bestsellers(request):
 	bestsellers = BestsellerList.objects.all()
@@ -80,6 +91,11 @@ def kos0(request, year):
     return render(request, 'kos1.html', { 'kos':kos })
 
 
+def ko_text(request, year):
+    text = ''.join([str(ko.text) for ko in KO.objects.filter(year=year)])
+    return HttpResponse(text, content_type="text/plain")
+
+
 def ko(request, filename):
     ko = KO.objects.get(filename=filename)
     similar = KO.objects.filter(year=ko.year).order_by('filename')
@@ -107,6 +123,79 @@ def media(request, file):
     response = HttpResponse(content=file)
     return response
 
+
+def text_summarization(request):
+    if request.method == 'POST':
+        form = TextSummarizationForm(request.POST, request.FILES)
+        if form.is_valid():
+            try:
+                text = handle_uploaded_file(request.FILES['file'])
+            except MultiValueDictKeyError:
+                text = 'Error'
+
+            url = handle_url(request.POST.get('url', None))
+
+            return render(request, 'text_summarization.html', {'form': form, 'url': url, 'text': text})
+
+    else:
+        form = TextSummarizationForm()
+        return render(request, 'text_summarization.html', {'form': form})
+
+
+def network_json(request):
+
+    """{
+      "nodes":[
+            {"name":"node1","group":1},
+            {"name":"node2","group":2},
+            {"name":"node3","group":2},
+            {"name":"node4","group":3}
+        ],
+        "links":[
+            {"source":2,"target":1,"weight":1},
+            {"source":0,"target":2,"weight":3}
+        ]
+    }"""
+    bestsellers = BestsellerList.objects.all()
+    graph = {"nodes": [], "links": []}
+
+    # create nodes for authors, titles, publishers,
+    authors = set([bestseller.author for bestseller in bestsellers])
+    for author in authors:
+        graph['nodes'].append({"name":author,"group":1},)
+
+    publishers = set([bestseller.publisher for bestseller in bestsellers])
+    for publisher in publishers:
+        graph['nodes'].append({"name":publisher,"group":1},)
+    titles = set([bestseller.title for bestseller in bestsellers])
+    for title in titles:
+        graph['nodes'].append({"name":title,"group":1},)
+
+    counter = 0
+    for bestseller in bestsellers:
+
+        if bestseller.author == '':
+            author = 'na{}'.format(counter)
+            graph['nodes'].append({"name": author, "group": 1}, )
+            author = graph['nodes'].index({"name": 'na{}'.format(counter), "group": 1}, )
+            counter += 1
+        else:
+            author = graph['nodes'].index({"name":bestseller.author,"group":1},)
+        title = graph['nodes'].index({"name":bestseller.title,"group":1},)
+        publisher = graph['nodes'].index({"name":bestseller.publisher,"group":1},)
+
+        # author-title edge
+        graph['links'].append({"source": author, "target": title, "weight": 1},)
+        # author-publisher edge
+        graph['links'].append({"source": author, "target": publisher, "weight": 1},)
+        # publisher-title edge
+        graph['links'].append({"source": publisher, "target": title, "weight": 1},)
+
+    response = JsonResponse(graph)
+    return response
+
+
+
 class KOListJson(BaseDatatableView):
     model = KO
     columns = ['year', 'issue', 'date', 'filename','text',]
@@ -130,10 +219,10 @@ class KOListJson(BaseDatatableView):
             path = reverse('kos2', args=(row.year, row.issue, row.date))
             return format_html("<a href='{0}'>{1}</a>".format(path, row.date))
         if column == 'text':
-            return format_html("<p style='font-size: 10px; text-align: left;'>{}</p>".format(mark_safe(row.text),))
+            return format_html("{0}".format(mark_safe(row.text)))
         if column == 'filename':
             path = reverse('ko', args=(row.filename,))
-            return format_html("<a href='{0}'>{1}</a>".format(path, row.filename))
+            return format_html("<a href='{0}'>{1}</a>".format(str(path), str(row.filename)))
 
         #else:
         #    return super(KOListJson, self).render_column(row, column)
@@ -143,3 +232,37 @@ class KOListJson(BaseDatatableView):
         if search:
             qs = qs.filter(text__icontains=search)
         return qs
+
+
+class DistantViewingJson(BaseDatatableView):
+    model = DistantViewing
+    columns = ['frame', 'time', 'score', 'object',]
+
+
+    # define column names that will be used in sorting order is important and should be same as order of columns displayed by datatables.
+    # For non sortable columns use empty value like ''
+    order_columns = ['frame', 'time', 'score', 'object',]
+
+    # set max limit of records returned, this is used to protect our site if someone tries to attack our site and make it return huge amount of data
+    max_display_length = 500
+
+    def render_column(self, row, column):
+        if column == 'frame':
+            return format_html("<p>{}</p>".format(row.frame,))
+        if column == 'time':
+            return format_html("<a onclick='set_time({})'>{}</a>".format(row.time, row.time,))
+        if column == 'score':
+            return format_html("<p>{}</p>".format(row.score,))
+        if column == 'object':
+            return format_html("<p>{}</p>".format(row.object,))
+        #else:
+        #    return super(KOListJson, self).render_column(row, column)
+
+    def filter_queryset(self, qs):
+        search = self.request.GET.get('search[value]', None)
+        if search:
+            qs = qs.filter(object__icontains=search)
+        return qs
+
+def distant_viewing(request):
+    return render(request, 'distant.html', )

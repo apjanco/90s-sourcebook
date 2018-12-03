@@ -33,7 +33,13 @@ urlpatterns = [
     path('KO/<year>/<issue>/<date>/', views.kos2, name='kos2'),
     path('KO/<year>/<issue>/', views.kos1, name='kos1'),
     path('KO/<year>/', views.kos0, name='kos0'),
+    path('ko_text/<year>/', views.ko_text, name='ko_text'),
     path('all-kos/', views.kos, name='kos'),
     path('datatable/ko/', views.KOListJson.as_view(), name='ko_list_json'),
+    path('distant_viewing_json/', views.DistantViewingJson.as_view(), name='distant_viewing_json'),
+    path('distant_viewing/', views.distant_viewing, name='distant_viewing'),
     path('bestsellers/', views.bestsellers, name='bestsellers'),
+    path('network_json/', views.network_json, name='network_json'),
+    path('text_summarization/', views.text_summarization, name='text_summarization'),
+    path('secret/', views.secret, name='secret'),
 ]

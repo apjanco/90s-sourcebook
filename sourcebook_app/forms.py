@@ -16,3 +16,8 @@ class rsvpForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
 	search = forms.CharField(label='search', max_length=100)
+
+
+class TextSummarizationForm(forms.Form):
+	file = forms.FileField(required=False)
+	url = forms.URLField(required=False)
